@@ -23,4 +23,9 @@ public class HomeController {
         ønskeService.createWish(request);
         return "/createWish";
     }
+
+    @GetMapping("/createwish")
+    public String createWish(){
+        return "/createWish";
+    }
 }

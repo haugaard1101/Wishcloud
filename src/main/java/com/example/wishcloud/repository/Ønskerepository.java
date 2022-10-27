@@ -13,7 +13,7 @@ public class Ønskerepository {
     public void createWish(Ønske ønske){
 
         try{
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into ønske (Product_name, Product_description,Product_price,Product_link) values (?,?,?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into ønskeliste (Product_name, Product_description,Product_price,Product_link) values (?,?,?,?)");
             preparedStatement.setString(1,ønske.getProduct_name());
             preparedStatement.setString(2,ønske.getProduct_description());
             preparedStatement.setString(3,ønske.getProduct_price());
