@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="HomePagecss.css">
     <meta charset="UTF-8">
-    <title>Ønskeskyen</title>
+    <title>Title</title>
 </head>
 <body>
 
@@ -13,30 +13,23 @@
 </div>
 
 <div class="navbar">
-    <a href="/" class="active">Home</a>
+    <a href="/">Home</a>
     <a href="createwishlist">Create Wishlist</a>
     <a href="createwish">Create Wish</a>
-    <a href="showwishlist">Show Wishlist</a>
+    <a href="showwishlist" class="active">Show Wishlist</a>
 </div>
 
-<div id="TitleHomePage">
+<h1>Wishlist</h1>
 
-
-</div>
-
-<div id="OpretØnskeSeddelButton">
-
-    <a href="createwish">
-        <button type="button">Opret ønskeliste</button>
-    </a>
-</div>
-
-
-<div>
-    <a href="showwishlist">
-        <button type="button">Hent ønskeliste</button>
-    </a>
-</div>
+<table>
+    <tr th:each="wish: ${wishlist}"> <!-- TR = Tablerow, TD table division(kolonner)-->
+        <td th:text="${wish.wish_id}"/>
+        <td th:text="${wish.Product_name}"/>
+        <td th:text="${wish.Product_description}"/>
+        <td th:text="${wish.Product_price}"/>
+        <td th:text="${wish.Product_link}"/>
+    </tr>
+</table>
 
 </body>
 </html>

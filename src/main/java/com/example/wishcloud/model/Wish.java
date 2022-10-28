@@ -1,14 +1,15 @@
 package com.example.wishcloud.model;
 
-public class Ønske {
-
+public class Wish {
+    private String wish_id;
     private String Product_name;
     private String Product_description;
     private String Product_price;
     private String Product_link;
 
 
-   public Ønske(String Product_name, String Product_description, String Product_price, String Product_link){
+    public Wish(String wish_id, String Product_name, String Product_description, String Product_price, String Product_link) {
+        this.wish_id = wish_id;
         this.Product_name = Product_name;
         this.Product_description = Product_description;
         this.Product_price = Product_price;
@@ -48,9 +49,17 @@ public class Ønske {
         Product_price = product_price;
     }
 
+    public String getWish_id() {
+        return wish_id;
+    }
+
+    public void setWish_id(String wish_id) {
+        this.wish_id = wish_id;
+    }
+
     @Override
     public String toString() {
-        return "Ønske{" +
+        return "Wish{" +
                 "title='" + Product_name + '\'' +
                 ", productDescription='" + Product_description + '\'' +
                 ", price=" + Product_price +

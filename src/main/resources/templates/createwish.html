@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="HomePagecss.css">
+    <meta charset="UTF-8">
+    <title>Create wish</title>
+</head>
+<body>
+<div id="logo">
+    <img src="https://s3-eu-west-1.amazonaws.com/cyjobapi-live/companies/pictures/logos/original/c976e36c7695bccde55140b3df0c7401-80f4bcf645e55c0337c88c68def9bd61.png"
+         width="20%" height="20%">
+</div>
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="createwishlist">Create Wishlist</a>
+    <a href="createwish" class="active">Create Wish</a>
+    <a href="showwishlist">Show Wishlist</a>
+</div>
+<form action="/createwish" method="post">
+    <label for="Product_name">Product name</label> <br>
+    <input type="text" name="Product_name"> <br>
+
+    <label for="Product_description">Product description</label> <br>
+    <input type="text" name="Product_description"> <br>
+
+    <label for="Product_price">Product price</label> <br>
+    <input type="number" name="Product_price"> <br>
+
+    <label for="Product_link">Product link</label> <br>
+    <input type="text" name="Product_link"> <br>
+
+    <a href="createwish">
+        <button onclick="myFunction()">Submit</button>
+
+        <script>
+            function myFunction() {
+                alert("You have successfully created a wish!");
+            }
+        </script>
+    </a>
+
+
+</form>
+
+</body>
+</html>
