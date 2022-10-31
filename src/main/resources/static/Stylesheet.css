@@ -1,49 +1,56 @@
+#logo{
 
-
-logo{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 50px;
-
-    width: 20%;
-    height: 500px;
-}
-
-#OpretØnskeSeddelButton{
-    padding-bottom: 500px;
-
-    margin-top: 500px;
-    background-color: aqua;
+    padding-bottom: 10px;
+    padding-top: 5px;
 
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.row {
+    padding-top: 150px;
+    display: flex;
+    background: white;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+
+}
+
+
+.navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #E7E9EB;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    border-radius: 25px;
 }
 
-li {
-    float: left;
+/*Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
 }
 
-li a {
-    display: block;
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #09b;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+    background-color: #09b;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
-}
-/* Add a color to the active/current link */
-li a.active {
-    background-color: #04AA6D;
-    color: aqua;
 }

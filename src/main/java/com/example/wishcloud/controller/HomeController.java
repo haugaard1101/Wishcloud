@@ -42,6 +42,8 @@ public class HomeController {
 
     @GetMapping("/showwishlist")
     public String getWishlist(Model model) {
+        //model.addAttribute("wishlist_name", repo.getWishlistName());
+
         model.addAttribute("wishlist", repo.getWishlist());
         System.out.println(wishService.getWishlist());
         return "showwishlist";

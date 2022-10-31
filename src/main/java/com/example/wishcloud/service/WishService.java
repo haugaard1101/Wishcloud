@@ -31,4 +31,8 @@ public class WishService {
         return repo.getWishlist();
 
     }
+    public String getWishlistName() {
+        return repo.getWishlistName();
+
+    }
 }

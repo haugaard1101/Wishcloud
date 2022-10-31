@@ -32,7 +32,7 @@ public class WishRepository {
     public void createWishlist(Wishlist wishlist) {
 
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into ønskeliste (wishlist_name, wishlist_description) values (?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("update ønskelistenavn set wishlist_name=?, wishlist_description=?");
             preparedStatement.setString(1, wishlist.getName());
             preparedStatement.setString(2, wishlist.getDescription());
             preparedStatement.executeUpdate();
@@ -63,6 +63,23 @@ public class WishRepository {
         }
 
         return wishlistArray;
+    }
+
+    public String getWishlistName() {
+
+        String wishlistName;
+
+        try {
+            PreparedStatement psts = connection.prepareStatement("SELECT wishlist_name from ønskelistenavn");
+            ResultSet resultSet = psts.executeQuery();
+
+            wishlistName = resultSet.getString("wishlist_name");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return wishlistName;
     }
 }
 
