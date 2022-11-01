@@ -13,17 +13,16 @@
 </div>
 
 <div class="navbar">
-    <a href="/">Home</a>
     <a href="createwishlist">Create Wishlist</a>
     <a href="createwish">Create Wish</a>
     <a href="showwishlist" class="active">Show Wishlist</a>
 </div>
 
-<h1>
+<h1 class="table">
 Your very own wishlist
 </h1>
 
-<table>
+<table class="table">
     <tr th:each="wish: ${wishlist}"> <!-- TR = Tablerow, TD table division(kolonner)-->
         <td th:text="${wish.wish_id}"/>
         <td th:text="${wish.Product_name}"/>
@@ -32,6 +31,37 @@ Your very own wishlist
         <td th:text="${wish.Product_link}"/>
     </tr>
 </table>
+
+
+
+<div class="footer">
+    <div class="footerOverskift">
+        <h4> Kontakt </h4>
+
+        <p>
+            Ønskeskyen
+            <br>
+            Guldbergsgade 29N 2200 København N
+            <br>
+            CVR nr.: 12 52 23 54
+            <br>
+            kea@Ønskeskyen.dk
+
+
+    </div>
+
+    <div class="footerOverskift1">
+        <h4>Følg os</h4>
+
+        <img class="social" src="https://stopspildafmad.org/images/icon/facebook.png" alt="facebook" width="" height="">
+        <img class="social" src="https://stopspildafmad.org/images/icon/linkedin.png" alt="linkedin" width="" height="">
+        <img class="social" src="https://stopspildafmad.org/images/icon/twitter.png" alt="twitter" width="" height="">
+        <br>
+        <img class="social" src="https://stopspildafmad.org/images/icon/instagram.png" alt="instagram" width="" height="">
+        <img class="social" src="https://stopspildafmad.org/images/icon/youtube.png" alt="youtube" width="" height="">
+        <img class="social" src="https://stopspildafmad.org/images/icon/blogspot.png" alt="blogger" width="" height="">
+
+    </div>
 
 </body>
 </html>

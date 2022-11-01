@@ -11,39 +11,77 @@
          width="20%" height="20%">
 </div>
 <div class="navbar">
-    <a href="/">Home</a>
     <a href="createwishlist">Create Wishlist</a>
     <a href="createwish" class="active">Create Wish</a>
     <a href="showwishlist">Show Wishlist</a>
 </div>
 
+
 <div id="createWish">
+    <form action="/createwish" method="post">
+        <label for="Product_name">Product name</label> <br>
+        <input type="text" class="form-control" name="Product_name:"> <br>
 
-<form action="/createwish" method="post">
-    <label for="Product_name">Product name</label> <br>
-    <input type="text" name="Product_name"> <br>
+        <br>
 
-    <label for="Product_description">Product description</label> <br>
-    <input type="text" name="Product_description"> <br>
+        <label for="Product_description">Product description</label> <br>
+        <input type="text" class="form-control" name="Product_description:"> <br>
 
-    <label for="Product_price">Product price</label> <br>
-    <input type="number" name="Product_price"> <br>
+        <br>
 
-    <label for="Product_link">Product link</label> <br>
-    <input type="text" name="Product_link"> <br>
+        <label for="Product_price">Product price</label> <br>
+        <input type="number" class="form-control" name="Product_price:"> <br>
 
-    <a href="createwish">
-        <button onclick="myFunction()">Submit</button>
+        <br>
 
-        <script>
-            function myFunction() {
-                alert("You have successfully created a wish!");
-            }
-        </script>
-    </a>
+        <label for="Product_link">Product link</label> <br>
+        <input type="text" class="form-control" name="Product_link:"> <br>
 
-</form>
+        <br>
+
+        <a href="createwish">
+            <button onclick="myFunction()">Submit</button>
+
+            <script>
+                function myFunction() {
+                    alert("You have successfully created a wish!");
+                }
+            </script>
+        </a>
+
+    </form>
+
 </div>
+<br>
+<br>
+<div class="footer">
+    <div class="footerOverskift">
+        <h4> Kontakt </h4>
+
+        <p>
+            Ønskeskyen
+            <br>
+            Guldbergsgade 29N 2200 København N
+            <br>
+            CVR nr.: 12 52 23 54
+            <br>
+            kea@Ønskeskyen.dk
+
+
+    </div>
+
+    <div class="footerOverskift1">
+        <h4>Følg os</h4>
+
+        <img class="social" src="https://stopspildafmad.org/images/icon/facebook.png" alt="facebook" width="" height="">
+        <img class="social" src="https://stopspildafmad.org/images/icon/linkedin.png" alt="linkedin" width="" height="">
+        <img class="social" src="https://stopspildafmad.org/images/icon/twitter.png" alt="twitter" width="" height="">
+        <br>
+        <img class="social" src="https://stopspildafmad.org/images/icon/instagram.png" alt="instagram" width="" height="">
+        <img class="social" src="https://stopspildafmad.org/images/icon/youtube.png" alt="youtube" width="" height="">
+        <img class="social" src="https://stopspildafmad.org/images/icon/blogspot.png" alt="blogger" width="" height="">
+
+    </div>
 
 </body>
 </html>
