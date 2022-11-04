@@ -24,7 +24,7 @@ public class HomeController {
     @PostMapping("/createwish")
     public String createWish(WebRequest request) {
         wishService.createWish(request);
-        return "HomePage";
+        return "createwish";
     }
     @PostMapping("/createwishlist")
     public String createWishlist(WebRequest request) {
@@ -43,7 +43,6 @@ public class HomeController {
     @GetMapping("/showwishlist")
     public String getWishlist(Model model) {
         //model.addAttribute("wishlist_name", repo.getWishlistName());
-
         model.addAttribute("wishlist", repo.getWishlist());
         System.out.println(wishService.getWishlist());
         return "showwishlist";

@@ -24,11 +24,11 @@ Your very own wishlist
 
 <table class="table">
     <tr th:each="wish: ${wishlist}"> <!-- TR = Tablerow, TD table division(kolonner)-->
-        <td th:text="${wish.wish_id}"/>
-        <td th:text="${wish.Product_name}"/>
-        <td th:text="${wish.Product_description}"/>
-        <td th:text="${wish.Product_price}"/>
-        <td th:text="${wish.Product_link}"/>
+        <td th:text="${wish.wish_id}"></td>
+        <td th:text="${wish.Product_name}"></td>
+        <td th:text="${wish.Product_description}"></td>
+        <td th:text="${wish.Product_price}"></td>
+        <td th:text="${wish.Product_link}"></td>
     </tr>
 </table>
 
